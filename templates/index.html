@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Sync Paint
+{% endblock %}
+
+
+{% block header %}
+    <h1>Sync Paint</h1>
+{% endblock %}
+
+{% block body %}
+    <div class="text-center">
+        {% for canvas in canvases %}
+            <a class="btn btn-primary btn-lg btn-block" href="{{ url_for('canvas', id=canvas.id) }}">Canvas {{canvas.id}}</a>
+        {% endfor %}
+    </div>
+{% endblock %}
